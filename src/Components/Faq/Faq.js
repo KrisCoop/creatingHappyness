@@ -33,14 +33,20 @@ class Faq extends Component{
          return(
         <div className="questions">
             <ul>
-                <li onClick={() => {this.change(blade)}}>What width of blade do you use?</li>
-                <p style={{ display: this.state.blade ? block : none }}>Blahblabhlaklb</p>
+                <li onClick={() => {this.change("blade")}}>What width of blade do you use?</li>
+                <p>Blahblabhlaklb</p>
                 <li>How do you cut it all into just one piece?</li>
+                <p>Blahblabhlaklb</p>
                 <li>Where is your saw setup?</li>
+                <p>Blahblabhlaklb</p>
                 <li>Have you ever cut yourself while making signs?</li>
+                <p>Blahblabhlaklb</p>
                 <li>What scroll saw are you using?</li>
+                <p>Blahblabhlaklb</p>
                 <li>How did you get into woodcutting?</li>
+                <p>Blahblabhlaklb</p>
                 <li>Do you have bulk pieces or cut to order?</li>
+                <p>Blahblabhlaklb</p>
             </ul>
         </div>
         )
