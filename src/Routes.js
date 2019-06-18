@@ -6,6 +6,7 @@ import Faq from './Components/Faq/Faq.js';
 import Gallery from './Components/Gallery/Gallery.js';
 import Home from './Components/Home/Home.js';
 import Order from './Components/Order/Order.js';
+import CustomerInfo from './Components/CustomerInfo/CustomerInfo';
 
 export default (
     <Switch>
@@ -14,6 +15,7 @@ export default (
         <Route component={Faq} path="/Faq" />
         <Route component={Gallery} path="/Gallery" />
         <Route component={Order} path="/Order" />
+        <Route component={CustomerInfo} path="/CustomerInfo" />
         <Route component={Home} path="/" />
     </Switch>
 )

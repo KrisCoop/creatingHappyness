@@ -23,8 +23,15 @@ massive(process.env.CONNECTION_STRING)
 
 //put endpoints here?
 
-app.get('/test', (req, res) => {
-    res.send("This worked.")
+app.get('/posts', (req, res) => {
+    const db = req.app.get('db');
+    db.posts.find()
+        .then((posts)=>{
+            res.send({success: true, posts})
+        })
+        .catch((err)=>{
+            res.send({success:false, err})
+        })
 })
 
 const port = process.env.PORT || 8080

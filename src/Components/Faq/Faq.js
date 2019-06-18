@@ -3,37 +3,37 @@ import './Faq.css';
 
 class Faq extends Component{
 
-    constructor(){
-        super();
-        this.store={
-            blade: false,
-            piece: false,
-            setup: false,
-            cut: false,
-            scroll: false,
-            intro: false,
-            bulk: false
-        }
-    }
+    // constructor(){
+    //     super();
+    //     this.store={
+    //         blade: false,
+    //         piece: false,
+    //         setup: false,
+    //         cut: false,
+    //         scroll: false,
+    //         intro: false,
+    //         bulk: false
+    //     }
+    // }
 
-    change = (str) => {
-        if(this.state[str]){
-            this.setState({
-            [str]: false
-            })
-        }else{
-            this.setState({
-                [str]: true
-            })
-        }
+    // change = (str) => {
+    //     if(this.state[str]){
+    //         this.setState({
+    //         [str]: false
+    //         })
+    //     }else{
+    //         this.setState({
+    //             [str]: true
+    //         })
+    //     }
         
-    }
+    // }
 
     render(){
          return(
         <div className="questions">
             <ul>
-                <li onClick={() => {this.change("blade")}}>What width of blade do you use?</li>
+                <li>What width of blade do you use?</li>
                 <p>Blahblabhlaklb</p>
                 <li>How do you cut it all into just one piece?</li>
                 <p>Blahblabhlaklb</p>
