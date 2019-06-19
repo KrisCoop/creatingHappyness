@@ -17,11 +17,11 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        axios.get('/posts').then((res) => {
-            this.setState({
-                postsList: res.posts})
-                console.log(res.posts)
-        });
+        // axios.get('/posts').then((res) => {
+        //     this.setState({
+        //         postsList: res.posts})
+        //         console.log(res.posts)
+        // });
         // axios get request to server to pull from "posts" table in database
         // Then, do a setState to put those posts into the postList variable in State
     }

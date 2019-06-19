@@ -1,0 +1,14 @@
+.Main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    margin-top: 5px;
+}
+
+.social img{
+    width: 35px;
+    height: 35px;
+    margin: 40px 6px;
+}

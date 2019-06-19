@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import './Contact.css';
 
 class Contact extends Component{
@@ -55,4 +57,4 @@ class Contact extends Component{
 
 }
 
-export default Contact;
+export default connect(state => state)(Contact);
