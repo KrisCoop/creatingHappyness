@@ -17,18 +17,19 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        // axios.get('/posts').then((res) => {
-        //     this.setState({
-        //         postsList: res.posts})
-        //         console.log(res.posts)
-        // });
+        axios.get('/posts').then((res) => {
+                this.setState({
+                    postsList: res.data.posts
+                })
+                console.log(res)
+        });
         // axios get request to server to pull from "posts" table in database
         // Then, do a setState to put those posts into the postList variable in State
     }
 
     render(){
         const postsList = this.state.postsList.reverse().map((e, i) => {    
-                return <Posts photo={e.image}  caption={e.caption}/>
+                return <Posts photo={e.image}  caption={e.caption} key={i}/>
         })
 
         return(

@@ -1,0 +1,12 @@
+li {
+    cursor: pointer;
+    font-size: 30px;
+}
+.questions {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+ul {
+    text-align: center;
+}
