@@ -33,7 +33,8 @@ class Faq extends Component{
 
     render(){
          return(
-        <div className="questions">
+        <div className="MainBox">
+            <div className="questions">
             <ul>
                 <li onClick={()=> {this.change('blade')}}>What width of blade do you use?</li>
                 <p style={{display: this.state.blade ? 'block' : 'none'}}>{blade}</p>
@@ -51,6 +52,8 @@ class Faq extends Component{
                 <p style={{display: this.state.bulk ? 'block' : 'none'}}>Blahblabhlaklb</p>
             </ul>
         </div>
+        </div>
+        
         )
     }
 }

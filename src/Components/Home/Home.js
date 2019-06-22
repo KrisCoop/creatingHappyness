@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css';
 import axios from 'axios';
+// import {Link} from 'react-router-dom';
+
 
 import Posts from './../Posts/Posts'
 
@@ -36,6 +38,7 @@ class Home extends Component{
             <div>
                 Home
                 {postsList}
+                {/* <Link to="/Admin/Orders" component={Admin}>Admin Login</Link> */}
             </div>
         )
     }

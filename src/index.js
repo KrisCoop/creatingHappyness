@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from './Redux/Reducer/index'
+import reducers from './Redux/Reducer/reducers'
 
 //How to stop redux
 

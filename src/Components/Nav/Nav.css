@@ -1,10 +1,12 @@
+    
 .Main {
     display: flex;
     justify-content: space-around;
 }
 
-.logo {
+.logo img {
     margin-top: 5px;
+    width: 20vw;
 }
 
 .social img{
