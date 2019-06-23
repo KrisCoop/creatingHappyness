@@ -6,24 +6,28 @@ import * as Actions from '../../Redux/action_creators/action_creators';
 
 class CustomerInfo extends Component {
 
-    firstNameChange = (event) => {
-        this.props.firstName(event.target.value);        
+    updateRedux = (event) => {
+        if(event.target.name === "first name"){
+            this.props.updateFirstName(event.target.value);
+        }else if(event.target.name === "last name"){
+            this.props.updateLastName(event.target.value)
+        }
+                
     }
 
     render(){
         return(
             <div> 
-                {this.props.firstName}
                 <div className="InputGroup">
                     <label>
                     First Name:
                         
-                        <input type="text" placeholder="..." value={this.props.name} onChange={this.handleNameChange} />
+                        <input type="text" name="first name" value={this.props.firstName} onChange={this.updateRedux} />
                     </label>
 
                     <label>
                     Last Name:
-                        <input type="text" />
+                        <input type="text" name="last name" value={this.props.lastName} onChange={this.updateRedux}/>
                     </label>
 
                     <label>
