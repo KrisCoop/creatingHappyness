@@ -25,7 +25,7 @@ class Order extends Component{
             [e.target.name]: e.target.value
         })
     }
-
+    
     render(){
         return(
             <div className="Main">

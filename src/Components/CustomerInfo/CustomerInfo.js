@@ -11,6 +11,18 @@ class CustomerInfo extends Component {
             this.props.updateFirstName(event.target.value);
         }else if(event.target.name === "last name"){
             this.props.updateLastName(event.target.value)
+        }else if(event.target.name === "email"){
+            this.props.updateEmail(event.target.value)
+        }else if(event.target.name === "phone"){
+            this.props.updatePhone(event.target.value)
+        }else if(event.target.name === "street address"){
+            this.props.updateStreetAddress(event.target.value)
+        }else if(event.target.name === "city"){
+            this.props.updateCity(event.target.value)
+        }else if(event.target.name === "state"){
+            this.props.updateState(event.target.value)
+        }else if(event.target.name === "zip"){
+            this.props.updateZip(event.target.value)
         }
                 
     }
@@ -32,35 +44,35 @@ class CustomerInfo extends Component {
 
                     <label>
                     Email Address:
-                        <input type="text" />
+                        <input type="text" name="email" value={this.props.email} onChange={this.updateRedux} />
                     </label>
 
                     <label>
                     Phone Number:
-                        <input type="text" />
+                        <input type="text" name="phone" value={this.props.phone} onChange={this.updateRedux} />
                     </label>
 
                     <label>
                     Street Address:
-                        <input type="text" />
+                        <input type="text" name="street address" value={this.props.streetAddress} onChange={this.updateRedux} />
                     </label>
 
                     <label>
                     City:
-                        <input type="text" />
+                        <input type="text" name="city" value={this.props.city} onChange={this.updateRedux} />
                     </label>
 
                     <label>
                     State:
-                        <input type="text" />
+                        <input type="text" name="state" value={this.props.state} onChange={this.updateRedux} />
                     </label>
 
                     <label>
 
                     Zip:
-                        <input type="text" />
+                        <input type="text" name="zip" value={this.props.zip} onChange={this.updateRedux} />
                     </label>
-
+            
             <button>Finish Order and Submit Info</button>
             </div> 
         </div>
