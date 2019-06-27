@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 import * as Actions from '../../Redux/action_creators/action_creators';
 
@@ -23,8 +24,54 @@ class CustomerInfo extends Component {
             this.props.updateState(event.target.value)
         }else if(event.target.name === "zip"){
             this.props.updateZip(event.target.value)
+        }          
+    }
+
+    
+    buttonClick = () => {
+        debugger
+
+        const newObj = {
+            firstName: this.props.firstName,
+            lastName: this.props.lastName,
+            email: this.props.email,
+            phone: this.props.phone,
+            streetAdress: this.props.streetAdress,
+            city: this.props.city,
+            state: this.props.state,
+            zip: this.props.zip,
+            mainText: this.props.mainText,
+            mainTextFont: this.props.mainTextFont,
+            mainTextColor: this.props.mainTextColor,
+            secondaryText: this.props.secondaryText,
+            secondaryTextFont: this.props.secondaryTextFont,
+            secondaryTextColor: this.props.secondaryTextColor,
+            backgroundColor: this.props.backgroundColor,
+            comments: this.props.comments
         }
-                
+
+        // store.subscribe(() => {
+        //       newObj = store.getState()
+        //   });
+
+          //check to see if the user even has an email. does one exist?
+          //"if an email and phone number don't currently exist,"
+          if(!newObj.email && !newObj.phone){
+              return alert('please enter at least an email or phone number')
+          } else {
+
+            axios.post('/custInfo', newObj).then((res) => {
+
+                if(res.data.success === true){
+                    alert('success!')
+                    this.props.history.push("/Home")
+                } else {
+                    alert('no dice.')
+                }
+            })
+
+         }
+        
     }
 
     render(){
@@ -72,12 +119,15 @@ class CustomerInfo extends Component {
                     Zip:
                         <input type="text" name="zip" value={this.props.zip} onChange={this.updateRedux} />
                     </label>
+                    
+            <button onClick={()=>this.props.history.push("/Order")}>Back to My Order</button>
             
-            <button>Finish Order and Submit Info</button>
+            <button onClick={this.buttonClick}>Finish Order and Submit Info</button>
             </div> 
         </div>
         )
     }
 }
+
 
 export default connect(state => state, Actions)(CustomerInfo);

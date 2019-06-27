@@ -21,7 +21,16 @@ massive(process.env.CONNECTION_STRING)
         })
 
 
+let orderId = 0;
+
+
 //put endpoints here?
+
+app.post('/custInfo', (req, res) => {
+    const db = req.app.get('db');
+    
+})
+
 
 app.get('/posts', (req, res) => {
     const db = req.app.get('db');

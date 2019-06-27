@@ -20,29 +20,44 @@ class Order extends Component{
         }
     }
 
-    updateState = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
     
+    updateRedux = (event) => {
+        if(event.target.name === "main text"){
+            this.props.updateMainText(event.target.value);
+        }else if(event.target.name === "main text font"){
+            this.props.updateMainTextFont(event.target.value)
+        }else if(event.target.name === "main text color"){
+            this.props.updateMainTextColor(event.target.value)
+        }else if(event.target.name === "secondary text"){
+            this.props.updateSecondaryText(event.target.value)
+        }else if(event.target.name === "secondary text font"){
+            this.props.updateSecondaryTextFont(event.target.value)
+        }else if(event.target.name === "secondary text color"){
+            this.props.updateSecondaryTextColor(event.target.value)
+        }else if(event.target.name === "background color"){
+            this.props.updateBackgroundColor(event.target.value)
+        }else if(event.target.name === "comments"){
+            this.props.updateComments(event.target.value)
+        }          
+    }
+
     render(){
         return(
             <div className="Main">
                 <div className="Sign" style={{backgroundColor: this.state.backgroundColor}}>
-                    <h2 style={{fontFamily: this.state.mainFont, color: this.state.mainColor}}>{this.state.mainText}</h2>
-                    <h4 style={{fontFamily: this.state.secFont, color: this.state.secColor}}>{this.state.secText}</h4>
+                    <h2 style={{fontFamily: this.props.mainTextFont, color: this.props.mainTextColor}}>{this.props.mainText}</h2>
+                    <h4 style={{fontFamily: this.props.secondaryTextFont, color: this.props.secondaryTextColor}}>{this.props.secondaryText}</h4>
                 </div>
             <div className="InputsDiv">
                 <div className="InputGroup">
                     <label>
                         Main Text:
-                        <input name="mainText" onChange={this.updateState} />
+                        <input type="text" name="main text" value={this.props.mainText} onChange={this.updateRedux} />
                     </label>
 
                     <label> 
                         Main Font:
-                        <select name="mainFont" onChange={this.updateState}>
+                        <select name="main text font" value={this.props.mainTextFont} onChange={this.updateRedux}>
                             <option value="Autumn">Autumn</option>
                             <option value="./../Fonts/a_gentle_touch/A Gentle Touch">A Gentle Touch</option>
                             <option value="./../Fonts/affection_ldr/affection_ldr"></option>
@@ -119,7 +134,7 @@ class Order extends Component{
 
                     <label>
                         Main Text Color:
-                        <select onChange={this.updateState} name="mainColor">
+                        <select onChange={this.updateRedux} name="main text color">
                             <option value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
                             <option value="#c46862">Sunburn</option>
@@ -205,12 +220,12 @@ class Order extends Component{
 
                     <label>
                         Secondary Text:
-                        <input type="text" name="secText" onChange={this.updateState}  />
+                        <input type="text" name="secondary text" onChange={this.updateRedux}  />
                     </label>
 
                     <label>
                         Secondary Font:
-                        <select name="secFont" onChange={this.updateState}>
+                        <select name="secondary text font" onChange={this.updateRedux}>
                             <option value="Autumn">Autumn</option>
                             <option value="./../Fonts/a_gentle_touch/A Gentle Touch">A Gentle Touch</option>
                             <option value="./../Fonts/affection_ldr/affection_ldr"></option>
@@ -286,7 +301,7 @@ class Order extends Component{
 
                     <label>
                         Secondary Color:
-                        <select onChange={this.updateState} name="secColor">
+                        <select onChange={this.updateRedux} name="secondary text color">
                             <option value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
                             <option value="#c46862">Sunburn</option>
@@ -371,7 +386,7 @@ class Order extends Component{
                 <div className="InputGroup">
                     <label>
                         Background Color:
-                        <select name="backgroundColor" onChange={this.updateState}>
+                        <select name="background color" onChange={this.updateRedux}>
                             <option selected value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
                             <option value="#c46862">Sunburn</option>
@@ -455,10 +470,10 @@ class Order extends Component{
 
                     <label>
                         Comments:
-                        <input type="text" name="comments" onChange={this.updateState} />
+                        <input type="text" name="comments" onChange={this.updateRedux} />
                     </label>
                     <br />
-                    <button>Finish Order and Submit Info</button>
+                    <button onClick={()=>this.props.history.push("/CustomerInfo")}>Finish Order and Submit Info</button>
                 </div>
                 </div>
             </div>

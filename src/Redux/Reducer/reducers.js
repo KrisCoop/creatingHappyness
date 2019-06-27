@@ -73,7 +73,7 @@ const zip = (state = '', action) => {
     }
 }
 
-const mainText = (state = '', action) => {
+const mainText = (state = 'Main', action) => {
     switch(action.type){
         case "add_main_text":
             return action.payload;
@@ -90,7 +90,7 @@ const mainTextFont = (state = '', action) => {
     }
 }
 
-const mainTextColor = (state = '', action) => {
+const mainTextColor = (state = '#eba1c6', action) => {
     switch(action.type){
         case "add_main_text_color":
             return action.payload;
@@ -99,7 +99,7 @@ const mainTextColor = (state = '', action) => {
     }
 }
 
-const secondaryText = (state = '', action) => {
+const secondaryText = (state = 'Secondary', action) => {
     switch(action.type){
         case "add_secondary_text":
             return action.payload;
@@ -117,7 +117,7 @@ const secondaryTextFont = (state = '', action) => {
     }
 }
 
-const secondaryTextColor = (state = '', action) => {
+const secondaryTextColor = (state = '#fdd06c', action) => {
     switch(action.type){
         case "add_secondary_text_color":
             return action.payload;
@@ -126,7 +126,7 @@ const secondaryTextColor = (state = '', action) => {
     }
 }
 
-const backgroundColor = (state = '', action) => {
+const backgroundColor = (state = 'White', action) => {
     switch(action.type){
         case "add_background_color":
             return action.payload;
