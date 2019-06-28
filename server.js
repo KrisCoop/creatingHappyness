@@ -36,8 +36,9 @@ app.post('/Messages', (req, res, next) => {
     const {firstName, lastName, email, phone, message} = req.body;
     let first_name = firstName;
     let last_name = lastName;
+    let is_processed = 'false';
     const db = req.app.get('db');
-    db.messages.insert({first_name, last_name, email, phone, message})
+    db.messages.insert({first_name, last_name, email, phone, message, is_processed})
         .then((message) => {
             res.send({success: true})
         }).catch((err) => {
