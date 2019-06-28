@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 // At some point, this component will make an axios request to the server to get all the customer orders 
@@ -13,6 +13,15 @@ class CustomerOrders extends Component{
             processedOrders: [],
             unprocessedOrders: []
         }
+    }
+
+    render(){
+        return(
+            <div>
+                <h4>Unprocessed Orders:</h4>
+                <h4>Processed Orders:</h4>
+            </div>
+        )
     }
 }
 

@@ -31,6 +31,19 @@ app.post('/custInfo', (req, res) => {
     
 })
 
+app.post('/Messages', (req, res, next) => {
+    const {firstName, lastName, email, phone, message} = req.body;
+    let first_name = firstName;
+    let last_name = lastName;
+    const db = req.app.get('db');
+    db.messages.insert({first_name, last_name, email, phone, message})
+        .then((message) => {
+            res.send({success: true})
+        }).catch((err) => {
+            res.send({success: false})
+        })
+})
+
 
 app.get('/posts', (req, res) => {
     const db = req.app.get('db');

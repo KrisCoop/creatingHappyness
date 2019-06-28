@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import './Contact.css';
-import Axios from 'axios';
+import axios from 'axios';
 
 class Contact extends Component{
     constructor(props){
@@ -28,7 +27,14 @@ class Contact extends Component{
         if (!this.state.email && !this.state.phone){
             alert("Please enter at least a phone number or email address.")
         }else{
-            Axios.post('/messages')
+            axios.post('/Messages', this.state)
+                .then((response) => {
+                    if(response.data.success === true){
+                        alert("Yay it worked.")
+                    }else{
+                        alert("Um, there was a problem. Try again.")
+                    }
+                })
         }
     }
 
@@ -66,13 +72,12 @@ just getting in touch with her that way. */}
                     Message:
                     <input className="messageBox" type="text" name="message" placeholder="Type:" value={this.state.message} onChange={this.updateState} />
                 </label>
-                <button className="submitInfo">Submit</button>
+                <button className="submitInfo" onClick={this.postMessage}>Submit</button>
 
-                {/* <h5 className='contactUs'>Also, feel free to contact us at creatinghappynessshop@gmail.com :)</h5> */}
             </div>
         )
     }
 
 }
 
-export default connect(state => state)(Contact);
+export default Contact;

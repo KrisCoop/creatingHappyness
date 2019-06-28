@@ -7,7 +7,7 @@ import Gallery from './Components/Gallery/Gallery.js';
 import Home from './Components/Home/Home.js';
 import Order from './Components/Order/Order.js';
 import CustomerInfo from './Components/CustomerInfo/CustomerInfo';
-// import Admin from './Components/Admin/Admin';
+import Admin from './Components/Admin/Admin';
 
 export default (
     <Switch>
@@ -17,6 +17,7 @@ export default (
         <Route component={Gallery} path="/Gallery" />
         <Route component={Order} path="/Order" />
         <Route component={CustomerInfo} path="/CustomerInfo" />
+        <Route component={Admin} path="/Admin"/>
         <Route component={Home} path="/" />
     </Switch>
 )
