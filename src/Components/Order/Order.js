@@ -4,6 +4,8 @@ import './Order.css';
 import * as Actions from '../../Redux/action_creators/action_creators';
 // import Autumn from './../../Fonts/autumn_in_november/autumn_in_november.ttf'
 
+import order1 from './../../images/order1.png'
+
 
 class Order extends Component{
     constructor(props){
@@ -45,6 +47,7 @@ class Order extends Component{
         return(
             <div className="Main">
                 <div className="Sign" style={{backgroundColor: this.state.backgroundColor}}>
+                    {/* <img className="KewlPng" src={order1} alt="Order 1"/> */}
                     <h2 style={{fontFamily: this.props.mainTextFont, color: this.props.mainTextColor}}>{this.props.mainText}</h2>
                     <h4 style={{fontFamily: this.props.secondaryTextFont, color: this.props.secondaryTextColor}}>{this.props.secondaryText}</h4>
                 </div>

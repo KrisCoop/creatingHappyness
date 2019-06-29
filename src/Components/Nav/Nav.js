@@ -11,11 +11,11 @@ class Nav extends Component{
 
     render(){
         return(
-            <div className="Main">
+            <div className="NavMain">
                 <div className="logo">
                     <img src={logo} alt="logo" title="Creating Happyness" />
                 </div>
-                <div className="links">
+                <div className="MainLinks">
                     <Link to="/">Home</Link>
                     <Link to="/About">About</Link>
                     <Link to="/Order">Order</Link>

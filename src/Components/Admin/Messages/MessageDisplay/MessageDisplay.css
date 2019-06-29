@@ -1,0 +1,19 @@
+.Container {
+    width: 35vw;
+    height: 40vh;
+    box-shadow: 2px 2px 5px grey;
+    margin: 1vw;
+    border-radius: 4px;
+}
+
+.Container img {
+    width: 12%;
+}
+
+@media screen and (max-width: 480px) {
+    .Container {
+        width: 55vw;
+        justify-content: center;
+        margin: 4vw;
+    }
+}

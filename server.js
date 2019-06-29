@@ -58,6 +58,17 @@ app.get('/posts', (req, res) => {
         })
 })
 
+app.get('/messages', (req, res) => {
+    const db = req.app.get('db');
+    db.messages.find()
+        .then((messages) =>{
+            res.send({success: true, messages})
+        })
+        .catch((err)=>{
+            res.send({success: false, err})
+        })
+})
+
 
 /// Catch all for routing. Must be below all other routes. 
 app.get('/*', (req, res) => {
@@ -68,5 +79,5 @@ app.get('/*', (req, res) => {
 
 
 app.listen(process.env.PORT || 8080, () => {
-    console.log(`App is running on port ${port}`)
+    console.log(`App is running on port ${process.env.PORT}`)
 });

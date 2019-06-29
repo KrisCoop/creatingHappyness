@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './MessageDisplay.css'
 import read from './../../../../envelope_read.png';
 import unread from './../../../../envelope_unread.png';
 
-function MessageDisplay (){
-    return(
+class MessageDisplay extends Component{
+
+    deleteMessage(){}
+
+    changeStatus(){}
+
+    render(){
+       return(
         <div className="Container">
-            <p>{this.props.firstName}</p>
-            <p>{this.props.lastName}</p>
-            <p>{this.props.email}</p>
-            <p>{this.props.phone}</p>
-            <p>{this.props.message}</p>
             <img src={this.props.is_processed === 'true' ? read : unread} />
+            <h3>Name: {this.props.firstName} {this.props.lastName} </h3>
+            <p>Email: {this.props.email}</p>
+            <p>Phone #: {this.props.phone}</p>
+            <p>{this.props.message}</p>
             
+
+            <button>delete</button>
+            <button>change status</button>
         </div>
-    )
+    ) 
+    }
+    
 }
+
+export default MessageDisplay;

@@ -34,7 +34,9 @@ class Faq extends Component{
     render(){
          return(
         <div className="MainBox">
+            <h5 className="clickme">(Click a Question!)</h5>
             <div className="questions">
+                
             <ul>
                 <li onClick={()=> {this.change('blade')}}>What width of blade do you use?</li>
                 <p style={{display: this.state.blade ? 'block' : 'none'}}>{blade}</p>

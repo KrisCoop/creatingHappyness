@@ -11,7 +11,7 @@ class Posts extends Component{
 
     render(){
         return(
-            <div>
+            <div className="PostImages">
                 <img src={this.props.photo} alt="user" />
                 <p>{this.props.caption}</p>
             </div>

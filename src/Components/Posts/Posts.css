@@ -1,0 +1,9 @@
+.PostImages img {
+    border-radius: 2%;
+    width: 40vw;
+}
+
+.PostImages {
+    width: 50vw;
+    margin: auto;
+}

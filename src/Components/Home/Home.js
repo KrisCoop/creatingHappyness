@@ -37,7 +37,6 @@ class Home extends Component{
 
         return(
             <div>
-                Home
                 {postsList}
                 <Link to="/Admin" component={Admin}>Admin Login</Link>
             </div>

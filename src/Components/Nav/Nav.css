@@ -1,5 +1,5 @@
     
-.Main {
+.NavMain {
     display: flex;
     justify-content: space-around;
 }
@@ -13,4 +13,33 @@
     width: 35px;
     height: 35px;
     margin: 40px 6px;
+}
+
+.MainLinks {
+        width: 30vw;
+        display: flex;
+        justify-content: space-around;
+        /* margin: 10px;  */
+}
+
+@media screen and (max-width: 480px) {
+    .NavMain {
+        flex-direction: column;
+        
+    }
+
+    .MainLinks {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .logo img {
+        width: 75vw;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-around;
+    }
 }

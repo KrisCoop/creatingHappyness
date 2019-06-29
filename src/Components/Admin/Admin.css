@@ -1,0 +1,21 @@
+.MainBox {
+
+}
+
+/* Use this same for links in navbar */
+
+.links {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px; 
+}
+
+@media screen and (max-width: 480px) {
+    .links {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
