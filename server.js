@@ -10,13 +10,13 @@ const app = express();
 app.use(express.json());
 
 massive(process.env.DATABASE_URL)
-        .then((dbInstance) => {
-            console.log(`database is connected`);
-            app.set('db', dbInstance)
-        })
-        .catch((err) => {
-            console.log(`There was a problem connecting to the server: ${err}`)
-        })
+    .then((dbInstance)=>{
+        app.set('db', dbInstance)
+        console.log('Db is connected')
+    })
+    .catch((error) => {
+        console.log(`Error: ${error}`)
+    })
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -72,11 +72,11 @@ app.get('/messages', (req, res) => {
 /// Catch all for routing. Must be below all other routes. 
 app.get('/*', (req, res) => {
     res.sendFile('index.html', {
-        root: path.join(__dirname, 'build')
+        root: path.join(__dirname, "build")
       })
 });
 
 const port = process.env.PORT || 8080
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
     console.log(`App is running on port ${process.env.PORT}`)
 });
