@@ -1,9 +1,11 @@
 .PostImages img {
-    border-radius: 2%;
+    border-radius: 12%;
     width: 40vw;
 }
 
 .PostImages {
     width: 50vw;
     margin: auto;
+    /* box-shadow: 2px 2px 5px grey; */
 }
+

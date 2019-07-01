@@ -5,7 +5,8 @@ function About(){
     return(
         <div className="Main">
             <div className="About">
-                <h1>Hey there, I'm Kimmie :)</h1>
+                <h1>Hey there,</h1>
+                <h1>I'm Kimmie :)</h1>
                 <p>
                     I'm an interior designer who married a contractor (a pretty handsome one right?). 
                 </p>

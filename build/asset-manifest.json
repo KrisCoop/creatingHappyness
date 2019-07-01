@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.b343ee57.chunk.css",
-    "main.js": "/static/js/main.9752b093.chunk.js",
-    "main.js.map": "/static/js/main.9752b093.chunk.js.map",
+    "main.css": "/static/css/main.5222b317.chunk.css",
+    "main.js": "/static/js/main.6a75b5f3.chunk.js",
+    "main.js.map": "/static/js/main.6a75b5f3.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.a3d4eb30.chunk.js": "/static/js/2.a3d4eb30.chunk.js",
-    "static/js/2.a3d4eb30.chunk.js.map": "/static/js/2.a3d4eb30.chunk.js.map",
+    "static/js/2.723ef32c.chunk.js": "/static/js/2.723ef32c.chunk.js",
+    "static/js/2.723ef32c.chunk.js.map": "/static/js/2.723ef32c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.34f68931a870c8ee4392a17be997522f.js": "/precache-manifest.34f68931a870c8ee4392a17be997522f.js",
+    "precache-manifest.2b14bc53334752a7f82f032241de0415.js": "/precache-manifest.2b14bc53334752a7f82f032241de0415.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b343ee57.chunk.css.map": "/static/css/main.b343ee57.chunk.css.map",
+    "static/css/main.5222b317.chunk.css.map": "/static/css/main.5222b317.chunk.css.map",
+    "static/media/envelope_read.png": "/static/media/envelope_read.333c318a.png",
+    "static/media/envelope_unread.png": "/static/media/envelope_unread.f72dddc9.png",
     "static/media/k_and_t_wedding_small-_website_720x.jpg": "/static/media/k_and_t_wedding_small-_website_720x.a2c4a680.jpg",
-    "static/media/website_logo_360x.png": "/static/media/website_logo_360x.b9ee3acb.png"
+    "static/media/order1.png": "/static/media/order1.e4973e3a.png",
+    "static/media/website_logo_360x.png": "/static/media/website_logo_360x.56559c83.png"
   }
 }

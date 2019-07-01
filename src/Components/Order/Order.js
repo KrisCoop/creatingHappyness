@@ -46,7 +46,7 @@ class Order extends Component{
     render(){
         return(
             <div className="Main">
-                <div className="Sign" style={{backgroundColor: this.state.backgroundColor}}>
+                <div className="Sign" style={{backgroundColor: this.props.backgroundColor}}>
                     {/* <img className="KewlPng" src={order1} alt="Order 1"/> */}
                     <h2 style={{fontFamily: this.props.mainTextFont, color: this.props.mainTextColor}}>{this.props.mainText}</h2>
                     <h4 style={{fontFamily: this.props.secondaryTextFont, color: this.props.secondaryTextColor}}>{this.props.secondaryText}</h4>

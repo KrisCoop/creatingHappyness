@@ -120,10 +120,13 @@ class CustomerInfo extends Component {
                         <input type="text" name="zip" value={this.props.zip} onChange={this.updateRedux} />
                     </label>
                     
-            <button onClick={()=>this.props.history.push("/Order")}>Back to My Order</button>
             
-            <button onClick={this.buttonClick}>Finish Order and Submit Info</button>
             </div> 
+            <div className="CustButtons">
+                <button onClick={()=>this.props.history.push("/Order")}>Back to My Order</button>
+            
+                <button onClick={this.buttonClick}>Finish Order and Submit Info</button>
+            </div>
         </div>
         )
     }

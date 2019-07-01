@@ -11,9 +11,9 @@ class Gallery extends Component{
 
     render(){
         return(
-            <div>
+            <div className="GalleryMain">
                 <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/16Floral.jpg' alt='16" FLoral'/>
-                <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/16MountainRound2.jpg' alt='16" Mountain Round'/>
+                {/* <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/16MountainRound2.jpg' alt='16" Mountain Round'/> */}
                 <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/16WoodlandTrees.jpg' alt='16" Woodland Trees'/>
                 <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/20DecorativeRound.jpg' alt='20" Decorative Round'/>
                 <img src='https://creating-happiness-gallery.s3-us-west-2.amazonaws.com/20FamilyEstArrowDetail.jpg' alt='20" Family Est Sign'/>

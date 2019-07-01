@@ -1,0 +1,39 @@
+.About {
+    box-sizing: border-box;
+    width: 60vw;
+    box-shadow: 2px 2px 5px grey;
+    padding: 1vw 5vw;
+    text-align: left;
+    text-indent: 4vw;
+}
+
+.About h1 {
+    font-size: 300%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.AboutPhoto {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+img {
+    width: 40vw;
+}
+
+@media screen and (max-width: 750px) {
+    .About h1 {
+        font-size: 180%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .About h1 {
+        font-size: 120%;
+    }
+}
