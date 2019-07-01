@@ -1,16 +1,13 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const controller = require('./controller.js');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-
-app.use(cors());
-app.use(bodyParser.json());
 
 massive(process.env.DATABASE_URL)
         .then((dbInstance) => {
@@ -21,6 +18,8 @@ massive(process.env.DATABASE_URL)
             console.log(`There was a problem connecting to the server: ${err}`)
         })
 
+app.use(cors());
+app.use(bodyParser.json());
 
 /// Serves static files (Frontend). Must be above all of the routes.
 app.use(express.static(path.join(__dirname, '/build')));
