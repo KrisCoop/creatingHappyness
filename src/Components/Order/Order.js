@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Order.css';
 import * as Actions from '../../Redux/action_creators/action_creators';
-// import Autumn from './../../Fonts/autumn_in_november/autumn_in_november.ttf'
+// import fonts:
+import './../../Fonts/autumn_in_november/Autumn in November.ttf'
+import './../../Fonts/a_gentle_touch/A Gentle Touch.ttf'
 
 import order1 from './../../images/order1.png'
 
@@ -61,8 +63,8 @@ class Order extends Component{
                     <label> 
                         Main Font:
                         <select name="main text font" value={this.props.mainTextFont} onChange={this.updateRedux}>
-                            <option value="Autumn">Autumn</option>
-                            <option value="./../Fonts/a_gentle_touch/A Gentle Touch">A Gentle Touch</option>
+                            <option value="Autumn in November">Autumn</option>
+                            <option value="A Gentle Touch">A Gentle Touch</option>
                             <option value="./../Fonts/affection_ldr/affection_ldr"></option>
                             <option value="./../Fonts/all_of_me/KGAllofMe"></option>
                             <option value="./../Fonts/amarillo/Amarillo"></option>
@@ -229,7 +231,7 @@ class Order extends Component{
                     <label>
                         Secondary Font:
                         <select name="secondary text font" onChange={this.updateRedux}>
-                            <option value="Autumn">Autumn</option>
+                            <option value="Autumn in November">Autumn</option>
                             <option value="./../Fonts/a_gentle_touch/A Gentle Touch">A Gentle Touch</option>
                             <option value="./../Fonts/affection_ldr/affection_ldr"></option>
                             <option value="./../Fonts/all_of_me/KGAllofMe"></option>

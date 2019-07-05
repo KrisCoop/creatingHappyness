@@ -1,23 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e81342dd3d48e14b6d5efed66b84907a",
+    "revision": "ec1ca28cfc4713ff5ba11df28cb5b90a",
     "url": "/index.html"
   },
   {
-    "revision": "519201934f0309b5d70b",
-    "url": "/static/css/main.5222b317.chunk.css"
+    "revision": "439bfeacf0a9ca3993ec",
+    "url": "/static/css/main.d338ae9a.chunk.css"
   },
   {
-    "revision": "7e39dbf33f6b41daac4c",
-    "url": "/static/js/2.723ef32c.chunk.js"
+    "revision": "a9a3bff7edb7fb47650d",
+    "url": "/static/js/2.8e5338dd.chunk.js"
   },
   {
-    "revision": "519201934f0309b5d70b",
-    "url": "/static/js/main.6a75b5f3.chunk.js"
+    "revision": "439bfeacf0a9ca3993ec",
+    "url": "/static/js/main.01792d69.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
+  },
+  {
+    "revision": "e6ced9eba3b398584ded705ae49dbfb4",
+    "url": "/static/media/A Gentle Touch.e6ced9eb.ttf"
+  },
+  {
+    "revision": "f8f3e38e1879f40652c7ff41333d2ac6",
+    "url": "/static/media/Autumn in November.f8f3e38e.ttf"
   },
   {
     "revision": "333c318a1e745112669e34eced57bf60",

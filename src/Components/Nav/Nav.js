@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
-import logo from './../../website_logo_360x.png'
-import facebook from './../../facebook-logo.png';
-import instagram from './../../instagram-logo.png'
+import logo from './../../Resources/website_logo_360x.png'
+import facebook from './../../Resources/facebook-logo.png';
+import instagram from './../../Resources/instagram-logo.png'
 
 import './Nav.css';
 

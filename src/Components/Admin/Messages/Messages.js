@@ -13,6 +13,10 @@ class Messages extends Component{
     }
 
     componentDidMount(){
+        this.getMessages();
+    }
+
+    getMessages = () => {
         axios.get('/messages').then((res) => {
             this.setState({
                 messagesList: res.data.messages
@@ -20,11 +24,23 @@ class Messages extends Component{
         })
     }
 
+    deleteMessage(deleteId){
+        console.log("ran")
+        axios.delete(`/api/messages/${deleteId}`)
+            .then((response) => {
+                alert(`Message Deleted.`)
+                this.getMessages();
+            })
+            .catch((err) => {
+                alert(`${err}`)
+            })
+    }
+
     render(){
         const allMessages = this.state.messagesList.map((element, index, arr) => {
-            return <MessageDisplay firstName={element.first_name} lastName={element.last_name} 
+            return <MessageDisplay key={index} firstName={element.first_name} lastName={element.last_name} 
             email={element.email} phone={element.phone} message={element.message} 
-            is_processed={element.is_processed}/>
+            is_processed={element.is_processed} id={element.id} delete={this.deleteMessage}/>
         })
         return(
             <div>

@@ -7,12 +7,14 @@
     box-shadow: 2px 2px 5px grey;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Autumn';
     font-style: normal;
     font-weight: 400;
-    src: './../../fonts/autumn_in_november.ttf';
-}
+    src: url('./../../fonts/autumn_in_november.ttf');
+    src: local('Autumn'), local('Autumn in November'),
+        url('./../../fonts/autumn_in_november.ttf') format('truetype')
+} */
 
 .Main {
     display: flex;

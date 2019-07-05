@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from 'axios';
 import { Route, Link, Switch } from "react-router-dom";
 
 import './Admin.css'

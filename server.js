@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const controller = require('./controller.js');
-const path = require('path');
+
 require('dotenv').config();
 
 const app = express();
-app.use(express.json());
 
 massive(process.env.DATABASE_URL)
     .then((dbInstance)=>{
@@ -68,7 +68,16 @@ app.get('/messages', (req, res) => {
         })
 })
 
-
+app.delete('/api/messages/:id', (req, res) => {
+    const dbInstance = req.app.get('db');
+    const id = req.params.id
+    dbInstance.DELETE_MESSAGE([id], (err, results) => {
+        res.send({success: true, results})
+    })
+    .catch((err) => {
+            res.send({success: false, err})
+    })
+})
 /// Catch all for routing. Must be below all other routes. 
 app.get('/*', (req, res) => {
     res.sendFile('index.html', {

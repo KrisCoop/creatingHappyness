@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import photo1 from './../../k_and_t_wedding_small-_website_720x.jpg';
+import photo1 from './../../Resources/k_and_t_wedding_small-_website_720x.jpg';
 function About(){
     return(
         <div className="Main">
