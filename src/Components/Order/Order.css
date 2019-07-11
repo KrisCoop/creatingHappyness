@@ -38,21 +38,23 @@
     margin: 2vw;
 }
 
-h2 {
-    font-size: 500%;
-    line-height: 40%;
-    padding-top: 10%;
+.KewlPng h2 {
+    font-size: 450%;
+    line-height: 5%;
+    padding-top: 8%;
 }
 
-h4 {
-    font-size: 300%;
-    line-height: 30%;
+.KewlPng h4 {
+    font-size: 250%;
+    line-height: 20%; 
+    margin-left: 50px;
 }
 
 .KewlPng {
     width: 300px;
     height: 300px;
-    position: absolute;
+    border-radius: 50%;
+    position: absolute; 
 }
 
 @media screen and (max-width: 700px) {

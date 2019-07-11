@@ -6,10 +6,6 @@ import axios from 'axios';
 
 class MessageDisplay extends Component{
 
-
-
-    changeStatus(){}
-
     render(){
        return(
         <div className="Container">
@@ -21,7 +17,7 @@ class MessageDisplay extends Component{
             
 
             <button onClick={() => this.props.delete(this.props.id)}>Delete</button>
-            <button>Change Status</button>
+            <button onClick={() => this.props.toggle(this.props.id)}>Change Status</button>
         </div>
     ) 
     }

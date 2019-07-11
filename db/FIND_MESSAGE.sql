@@ -1,0 +1,1 @@
+SELECT is_processed FROM messages WHERE id = $1;

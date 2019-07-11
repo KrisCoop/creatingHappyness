@@ -24,15 +24,29 @@ class Messages extends Component{
         })
     }
 
-    deleteMessage(deleteId){
-        console.log("ran")
+    deleteMessage = (deleteId) => {
         axios.delete(`/api/messages/${deleteId}`)
             .then((response) => {
+                console.log(response.data.results)
                 alert(`Message Deleted.`)
-                this.getMessages();
+                this.setState({
+                    messagesList: response.data.results
+                })
             })
             .catch((err) => {
-                alert(`${err}`)
+                alert(`There was an issue deleting this message: ${err}`)
+            })
+    }
+
+    toggleMessage = (editId) =>{
+        axios.put(`/api/messages/${editId}`)
+            .then((response) => {
+                this.setState({
+                    messagesList: response.data.results
+                })
+            })
+            .catch((err) => {
+                alert(`There was an issue editing this message: ${err}`)
             })
     }
 
@@ -40,7 +54,8 @@ class Messages extends Component{
         const allMessages = this.state.messagesList.map((element, index, arr) => {
             return <MessageDisplay key={index} firstName={element.first_name} lastName={element.last_name} 
             email={element.email} phone={element.phone} message={element.message} 
-            is_processed={element.is_processed} id={element.id} delete={this.deleteMessage}/>
+            is_processed={element.is_processed} id={element.id} delete={this.deleteMessage} 
+            toggle={this.toggleMessage}/>
         })
         return(
             <div>

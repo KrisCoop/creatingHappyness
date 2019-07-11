@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import './Order.css';
 import * as Actions from '../../Redux/action_creators/action_creators';
 // import fonts:
-import './../../Fonts/autumn_in_november/Autumn in November.ttf'
-import './../../Fonts/a_gentle_touch/A Gentle Touch.ttf'
+import './../../Fonts/autumn_in_november/Autumn in November.ttf';
+import './../../Fonts/a_gentle_touch/A Gentle Touch.ttf';
 
-import order1 from './../../images/order1.png'
+import order1 from './../../images/order1.png';
+import pic from './../../Resources/envelope_read.png'
+
 
 
 class Order extends Component{
@@ -49,9 +51,12 @@ class Order extends Component{
         return(
             <div className="Main">
                 <div className="Sign" style={{backgroundColor: this.props.backgroundColor}}>
-                    {/* <img className="KewlPng" src={order1} alt="Order 1"/> */}
-                    <h2 style={{fontFamily: this.props.mainTextFont, color: this.props.mainTextColor}}>{this.props.mainText}</h2>
-                    <h4 style={{fontFamily: this.props.secondaryTextFont, color: this.props.secondaryTextColor}}>{this.props.secondaryText}</h4>
+                    <div className="KewlPng" style={{backgroundImage: `url(${order1})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+                        <div className="Werds">
+                            <h2 style={{fontFamily: this.props.mainTextFont, color: this.props.mainTextColor}}>{this.props.mainText}</h2>
+                            <h4 style={{fontFamily: this.props.secondaryTextFont, color: this.props.secondaryTextColor}}>{this.props.secondaryText}</h4>
+                        </div>
+                    </div>
                 </div>
             <div className="InputsDiv">
                 <div className="InputGroup">

@@ -30,9 +30,16 @@ class Contact extends Component{
             axios.post('/Messages', this.state)
                 .then((response) => {
                     if(response.data.success === true){
-                        alert("Yay it worked.")
+                        alert("Thanks for your message! We will contact you as soon as possible.")
+                        this.setState({
+                            firstName: "",
+                            lastName: "",
+                            email: "",
+                            phone: "",
+                            message: ""
+                        })
                     }else{
-                        alert("Um, there was a problem. Try again.")
+                        alert("There was a problem. Try again later.")
                     }
                 })
         }

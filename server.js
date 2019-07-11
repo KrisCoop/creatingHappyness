@@ -24,60 +24,25 @@ app.use(bodyParser.json());
 /// Serves static files (Frontend). Must be above all of the routes.
 app.use(express.static(path.join(__dirname, '/build')));
 
-//put endpoints here?
+// order post endpoint
+app.post('/custInfo', controller.orderPost)
 
-app.post('/custInfo', (req, res) => {
-    const db = req.app.get('db');
-    
-})
+// get posts for home page
+app.get('/posts', controller.getPosts)
 
-app.post('/Messages', (req, res, next) => {
-    const {firstName, lastName, email, phone, message} = req.body;
-    let first_name = firstName;
-    let last_name = lastName;
-    let is_processed = 'false';
-    const db = req.app.get('db');
-    db.messages.insert({first_name, last_name, email, phone, message, is_processed})
-        .then((message) => {
-            res.send({success: true})
-        }).catch((err) => {
-            res.send({success: false})
-        })
-})
+// post messages endpoint
+app.post('/Messages', controller.sendMessage)
 
+// get user messages
+app.get('/messages', controller.checkMessages)
 
-app.get('/posts', (req, res) => {
-    const db = req.app.get('db');
-    db.posts.find()
-        .then((posts)=>{
-            res.send({success: true, posts})
-        })
-        .catch((err)=>{
-            res.send({success:false, err})
-        })
-})
+//delete user messages
+app.delete('/api/messages/:id', controller.deleteMessage);
 
-app.get('/messages', (req, res) => {
-    const db = req.app.get('db');
-    db.messages.find()
-        .then((messages) =>{
-            res.send({success: true, messages})
-        })
-        .catch((err)=>{
-            res.send({success: false, err})
-        })
-})
+//toggle user messages 'isProcessed' value
 
-app.delete('/api/messages/:id', (req, res) => {
-    const dbInstance = req.app.get('db');
-    const id = req.params.id
-    dbInstance.DELETE_MESSAGE([id], (err, results) => {
-        res.send({success: true, results})
-    })
-    .catch((err) => {
-            res.send({success: false, err})
-    })
-})
+app.put('/api/messages/:id', controller.toggleProcess);
+
 /// Catch all for routing. Must be below all other routes. 
 app.get('/*', (req, res) => {
     res.sendFile('index.html', {
