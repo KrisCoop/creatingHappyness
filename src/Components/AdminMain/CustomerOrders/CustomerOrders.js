@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 // At some point, this component will make an axios request to the server to get all the customer orders 
 // from the databases. It will then go over every object in the response array and check to see if

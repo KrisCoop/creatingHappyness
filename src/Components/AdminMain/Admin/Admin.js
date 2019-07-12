@@ -3,8 +3,8 @@ import { Route, Link, Switch } from "react-router-dom";
 
 import './Admin.css'
 
-import CustomerOrders from './CustomerOrders/CustomerOrders';
-import Messages from './Messages/Messages';
+import CustomerOrders from './../CustomerOrders/CustomerOrders';
+import Messages from './../Messages/Messages';
 
 class Admin extends Component{
 

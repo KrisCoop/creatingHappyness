@@ -7,7 +7,6 @@ import './../../Fonts/autumn_in_november/Autumn in November.ttf';
 import './../../Fonts/a_gentle_touch/A Gentle Touch.ttf';
 
 import order1 from './../../images/order1.png';
-import pic from './../../Resources/envelope_read.png'
 
 
 

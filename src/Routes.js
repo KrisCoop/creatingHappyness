@@ -7,7 +7,7 @@ import Gallery from './Components/Gallery/Gallery.js';
 import Home from './Components/Home/Home.js';
 import Order from './Components/Order/Order.js';
 import CustomerInfo from './Components/CustomerInfo/CustomerInfo';
-import Admin from './Components/Admin/Admin';
+import Admin from './Components/AdminMain/Admin/Admin';
 
 export default (
     <Switch>

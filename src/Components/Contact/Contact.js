@@ -38,6 +38,7 @@ class Contact extends Component{
                             phone: "",
                             message: ""
                         })
+                        this.props.history.push('/')
                     }else{
                         alert("There was a problem. Try again later.")
                     }

@@ -1,0 +1,11 @@
+.loggin{
+    background: white;
+    position: fixed;
+    bottom: 50%;
+    right: 35%;
+    height: 25%;
+    width: 400px;
+    border: 2px solid black;
+    z-index: 3;
+    margin: auto;
+}

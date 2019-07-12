@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './MessageDisplay.css'
-import read from './../../../../Resources/envelope_read.png';
-import unread from './../../../../Resources/envelope_unread.png';
-import axios from 'axios';
+import read from './../../../Resources/envelope_read.png';
+import unread from './../../../Resources/envelope_unread.png';
 
 class MessageDisplay extends Component{
 

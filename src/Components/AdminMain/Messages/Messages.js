@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import axios from 'axios';
 import './Messages.css'
-import MessageDisplay from './MessageDisplay/MessageDisplay';
+import MessageDisplay from '../MessageDisplay/MessageDisplay';
 
 
 class Messages extends Component{
