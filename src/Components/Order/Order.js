@@ -60,12 +60,12 @@ class Order extends Component{
             <div className="InputsDiv">
                 <div className="InputGroup">
                     <label>
-                        Main Text:
+                        Main Text
                         <input type="text" name="main text" value={this.props.mainText} onChange={this.updateRedux} />
                     </label>
 
                     <label> 
-                        Main Font:
+                        Main Font
                         <select name="main text font" value={this.props.mainTextFont} onChange={this.updateRedux}>
                             <option value="Autumn in November">Autumn</option>
                             <option value="A Gentle Touch">A Gentle Touch</option>
@@ -142,7 +142,7 @@ class Order extends Component{
                     </label>
 
                     <label>
-                        Main Text Color:
+                        Main Text Color
                         <select onChange={this.updateRedux} name="main text color">
                             <option value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
@@ -228,12 +228,12 @@ class Order extends Component{
                 <div className="InputGroup">
 
                     <label>
-                        Secondary Text:
+                        Secondary Text
                         <input type="text" name="secondary text" onChange={this.updateRedux}  />
                     </label>
 
                     <label>
-                        Secondary Font:
+                        Secondary Font
                         <select name="secondary text font" onChange={this.updateRedux}>
                             <option value="Autumn in November">Autumn</option>
                             <option value="./../Fonts/a_gentle_touch/A Gentle Touch">A Gentle Touch</option>
@@ -309,7 +309,7 @@ class Order extends Component{
                     </label>
 
                     <label>
-                        Secondary Color:
+                        Secondary Color
                         <select onChange={this.updateRedux} name="secondary text color">
                             <option value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
@@ -394,7 +394,7 @@ class Order extends Component{
                 </div>
                 <div className="InputGroup">
                     <label>
-                        Background Color:
+                        Background Color
                         <select name="background color" onChange={this.updateRedux}>
                             <option selected value="#aa393f">Apple</option>
                             <option value="#823b41">Wine</option>
@@ -478,7 +478,7 @@ class Order extends Component{
                     </label>
 
                     <label>
-                        Comments:
+                        Comments
                         <input type="text" name="comments" onChange={this.updateRedux} />
                     </label>
                     <br />
