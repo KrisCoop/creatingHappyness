@@ -60,13 +60,14 @@ class CustomerInfo extends Component {
               return alert('please enter at least an email or phone number')
           } else {
 
-            axios.post('/custInfo', newObj).then((res) => {
+            axios.post('/custInfo', newObj)
+                .then((res) => {
 
                 if(res.data.success === true){
-                    alert('success!')
+                    alert('Thank you for your order! We will be reaching out to you soon.')
                     this.props.history.push("/Home")
                 } else {
-                    alert('no dice.')
+                    alert('Sorry, looks like there was an error submitting your order. Please try again. ')
                 }
             })
 
